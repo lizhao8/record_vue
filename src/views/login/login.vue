@@ -86,7 +86,7 @@ import LangSelect from '@/components/LangSelect'
 import SocialSign from './components/SocialSignin'
 
 export default {
-  name: 'login',
+  name: 'Login',
   components: { LangSelect, SocialSign },
   data() {
     const validateUsername = (rule, value, callback) => {
@@ -105,8 +105,8 @@ export default {
     }
     return {
       loginForm: {
-      username: 'admin',
-      password: '123456'
+        username: 'admin',
+        password: '123456'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],

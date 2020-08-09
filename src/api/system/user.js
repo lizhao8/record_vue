@@ -1,41 +1,17 @@
 import request from '@/utils/request'
 
-export function getList(query) {
+export function getList(params) {
   return request({
-    url: '/user/list/'+query['page']+"/"+query['limit'],
+    url: '/user/list/' + params['page'] + '/' + params['limit'],
     method: 'get',
-    params: query
+    params: params
   })
 }
 
-export function fetchArticle(id) {
+export function state(params) {
   return request({
-    url: '/vue-element-admin/article/detail',
+    url: '/user/state/' + params['page'] + '/' + params['limit'],
     method: 'get',
-    params: { id }
-  })
-}
-
-export function fetchPv(pv) {
-  return request({
-    url: '/vue-element-admin/article/pv',
-    method: 'get',
-    params: { pv }
-  })
-}
-
-export function createArticle(data) {
-  return request({
-    url: '/vue-element-admin/article/create',
-    method: 'post',
-    data
-  })
-}
-
-export function updateArticle(data) {
-  return request({
-    url: '/vue-element-admin/article/update',
-    method: 'post',
-    data
+    params: params
   })
 }
