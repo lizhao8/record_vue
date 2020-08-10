@@ -8,7 +8,7 @@ import { asyncRoutes, constantRoutes } from '@/router'
 function hasPermission(menus, route) {
   if (route.meta && menus) {
     //if(menus.length>0){
-      return menus.find(menu => route.meta.title===menu['menuNo'])
+      return menus.find(menu => route.meta.title===menu['no'])
    // }else{
     //  return undefined
     //}
